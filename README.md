@@ -14,23 +14,27 @@ A Python script that analyzes a stock portfolio and runs a Monte Carlo price sim
 - `holdings.csv` — shares owned and cost basis
 - `current_prices.csv` — current prices for each ticker
 - `prices.csv` — historical closing prices
+
 --Requirements--
 - pandas
 - NumPy
 - Matplotlib
 --------------------
-The CSV files must be in the same folder as `codeful.py`. 
+The CSV files must be in the same folder as `codeful.py`.
+
 --CSV FILES--
 ** current_prices.csv **
   ticker,price
   AAPL,180
   TSLA,250
   NVDA,12
+  
 ** prices.csv **
   date,close
   2026-01-02,100
   2026-01-03,103
   2026-01-04,101
+  
 ** holdings.csv **
   ticker,shares,cost_basis
   AAPL,10,150
