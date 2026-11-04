@@ -35,7 +35,7 @@ def print_summary(merged, vol, paths, start):
     print(f"Your total value is {merged['value'].sum()}")
     print(f"Your biggest position is {merged.loc[merged['value'].idxmax(), 'ticker']} with a value of {merged['value'].max()}")
     print(f"Your smallest position is {merged.loc[merged['value'].idxmin(), 'ticker']} with a value of {merged['value'].min()}")
-    print(f"Your total pnl is {merged["pnl"].sum()}")
+    print(f"Your total pnl is {merged['pnl'].sum()}")
     print(f"Volatility : {vol}")
     final = paths[-1]
     below = len(final[final < start])
