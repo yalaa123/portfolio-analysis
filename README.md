@@ -1,4 +1,5 @@
 A Python script that analyzes a stock portfolio and runs a Monte Carlo price simulation.
+
 --Features--
 - Calculates total portfolio value
 - Identifies the largest and smallest positions
