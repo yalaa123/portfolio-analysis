@@ -30,6 +30,7 @@ The CSV files must be in the same folder as `codeful.py`.
 --CSV FILES--
 
 ** current_prices.csv **
+
   ticker,price
   
   AAPL,180
@@ -39,6 +40,7 @@ The CSV files must be in the same folder as `codeful.py`.
   NVDA,12
   
 ** prices.csv **
+
   date,close
   
   2026-01-02,100
