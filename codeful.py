@@ -43,7 +43,7 @@ def print_summary(merged, vol, paths, start):
     print(f"Mean : {final.mean()}")
     print(f"Median : {np.median(final)}")
     print(f"5th percentile : {np.percentile(final, 5)}")
-    print(f"9th percentile : {np.percentile(final, 95)}")
+    print(f"95th percentile : {np.percentile(final, 95)}")
 def chart_pnl(merged):
     colors = []
     for x in merged["pnl"]:
