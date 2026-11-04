@@ -10,12 +10,17 @@ A Python script that analyzes a stock portfolio and runs a Monte Carlo price sim
 - Displays portfolio and simulation charts
 
 --Files--
+
 - `codeful.py` — main analysis and simulation script
+
 - `holdings.csv` — shares owned and cost basis
+
 - `current_prices.csv` — current prices for each ticker
+
 - `prices.csv` — historical closing prices
 
 --Requirements--
+
 - pandas
 - NumPy
 - Matplotlib
@@ -23,6 +28,7 @@ A Python script that analyzes a stock portfolio and runs a Monte Carlo price sim
 The CSV files must be in the same folder as `codeful.py`.
 
 --CSV FILES--
+
 ** current_prices.csv **
   ticker,price
   
