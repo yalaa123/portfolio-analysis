@@ -6,6 +6,8 @@ mu=0.001
 sigma=0.02
 days=252
 n_paths=10000
+K = 100
+r = 0.05
 def load_portfolio():
     df = pd.read_csv("holdings.csv")
     df_prices = pd.read_csv("current_prices.csv")
@@ -69,12 +71,17 @@ def chart_histogram(final,start):
     plt.xlabel("Ending price")
     plt.ylabel("Paths")
     plt.show()
-
+def option_price(paths, K, r):
+    final = paths[-1]
+    payoff = np.maximum(final - K, 0)
+    return (payoff.mean() * np.exp(-r))
 def main():
     merged = add_portfolio_columns(load_portfolio())
     vol = volatility(load_prices())
-    paths = simulate(start, mu, sigma, days, n_paths)
+    paths = simulate(start,r / days, vol, days, n_paths)
     print_summary(merged, vol, paths, start)
+    estimated_option_price = option_price(paths, K, r)
+    print(f"Estimated call option price: ${estimated_option_price:.2f}")
     chart_paths(paths)
     chart_histogram(paths[-1],start)
     chart_pnl(merged)
